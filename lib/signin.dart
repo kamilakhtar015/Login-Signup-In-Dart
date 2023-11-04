@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:login_signup/signup.dart';
 
 class MySignin extends StatefulWidget {
   const MySignin({super.key});
@@ -10,12 +11,15 @@ class MySignin extends StatefulWidget {
 class _MyLoginState extends State<MySignin> {
   @override
   Widget build(BuildContext context) {
+    final double screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
               height: 430,
+              width: screenWidth,
               decoration: const BoxDecoration(
                   image: DecorationImage(
                       image: AssetImage('assets/asset1.jpg'),
@@ -52,11 +56,11 @@ class _MyLoginState extends State<MySignin> {
                         labelText: 'Email',
                         labelStyle: TextStyle(
                             color: Color.fromARGB(255, 168, 148, 241)),
-                        hintText: 'Enter your email address',
-                        hintStyle: TextStyle(
-                            color: Color.fromARGB(255, 168, 148, 241)),
                         contentPadding: EdgeInsets.symmetric(horizontal: 16),
+                        // enabledBorder: InputBorder.none,
+                        border: InputBorder.none,
                       ),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   const SizedBox(
@@ -76,11 +80,11 @@ class _MyLoginState extends State<MySignin> {
                           labelText: 'Password',
                           labelStyle: TextStyle(
                               color: Color.fromARGB(255, 168, 148, 241)),
-                          hintText: 'Enter your password',
-                          hintStyle: TextStyle(
-                              color: Color.fromARGB(255, 168, 148, 241)),
                           contentPadding:
-                              EdgeInsets.symmetric(horizontal: 16.0)),
+                              EdgeInsets.symmetric(horizontal: 16.0),
+                          enabledBorder: InputBorder.none,
+                          border: InputBorder.none),
+                      textAlign: TextAlign.center,
                     ),
                   ),
                   const SizedBox(height: 20),
@@ -107,15 +111,28 @@ class _MyLoginState extends State<MySignin> {
                     ),
                   ),
                   const SizedBox(height: 20),
-                  const Row(
+                  Row(
                     mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Text(
-                        "Don't have an account? Sign up",
+                      const Text(
+                        "Don't have an account?",
                         style: TextStyle(
                             color: Color.fromARGB(255, 168, 148, 241),
                             fontWeight: FontWeight.bold),
                       ),
+                      TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => const MySignUp()));
+                          },
+                          child: const Text(
+                            'Sign Up',
+                            style: TextStyle(
+                                color: Color.fromARGB(255, 168, 148, 241),
+                                fontWeight: FontWeight.bold),
+                          ))
                     ],
                   ),
                   const SizedBox(height: 10),
