@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "765704022127",
-    "project_id": "fir-flutter-codelab-1f875",
-    "storage_bucket": "fir-flutter-codelab-1f875.appspot.com"
+    "project_number": "488432078829",
+    "project_id": "testingfirebase-15982",
+    "storage_bucket": "testingfirebase-15982.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:765704022127:android:5c6335d3246d39dd58059a",
+        "mobilesdk_app_id": "1:488432078829:android:3dca8582023dd052daa1e4",
         "android_client_info": {
           "package_name": "com.example.login_assignment2"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyCAwDyf7RF3PHxfJIRZpYbPNfbz_xa_xpA"
+          "current_key": "AIzaSyDPzGoQJkcAdzyrZi-Y25ABCRuNDLV1cUs"
         }
       ],
       "services": {
